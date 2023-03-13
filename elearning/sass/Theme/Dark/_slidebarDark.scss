@@ -1,0 +1,22 @@
+.darkMode {
+    .side__bar {
+        background-color: $color-dark-0;
+        color: $color-white-0;
+        border: $color-dark-0;
+    }
+    .side__bar__btn {
+        background-color: $color-dark-0;
+        border-color: $color-dark-0;
+        i {
+            color: white;
+        }
+    }
+    .side__bar__content {
+        .switch {
+            .slider {
+                background-color: $color-dark-1;
+                box-shadow: 0 0 2px 3px $color-dark-2;
+            }
+        }
+    }
+}

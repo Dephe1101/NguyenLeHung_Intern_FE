@@ -1,0 +1,53 @@
+.footer {
+    @include styleText($color-gray-0, $fs-1, $fw-0);
+    .footer__top {
+        width: 90%;
+        margin: $mg-4 auto;
+        .nav--height {
+            height: 120px;
+            .nav-item {
+                flex-basis: 25%;
+                .nav-link {
+                    padding: 0;
+                    color: $color-blue-0;
+                    &.bold {
+                        font-weight: $fw-2;
+                    }
+                }
+            }
+        }
+        .button__dropup {
+            i {
+                padding: 0 $pd-2;
+            }
+            &::after {
+                margin-left: 20px;
+            }
+        }
+        .btn-check:checked + .btn,
+        .btn.active,
+        .btn.show,
+        .btn:first-child:active,
+        :not(.btn-check) + .btn:active {
+            background-color: $color-white-0;
+            color: $color-gray-0;
+        }
+    }
+    .footer__bottom {
+        .logo-black {
+            display: inline;
+        }
+        .logo-white {
+            display: none;
+        }
+        width: 90%;
+        margin: $mg-3 - 2 auto;
+        img {
+            width: 110px;
+            margin-right: $mg-0 + 5;
+        }
+        .nav-link {
+            @include styleText($color-blue-0, $fs-1, $fw-0);
+        }
+    }
+}

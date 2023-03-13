@@ -1,0 +1,65 @@
+.side__bar {
+    position: fixed;
+    width: 400px;
+    top: 25%;
+    right: 0;
+    z-index: 10;
+    background-color: $color-gray-4;
+    transform: translateX(100%);
+    transition: all, 0.5s;
+    .side__bar__btn {
+        @include styleButton($color-black-0, $color-gray-4, $color-gray-4, $fs-5, $fw-0, $pd-3, $pd-2);
+        border-radius: 8px 0 0 8px;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    .side__bar__content {
+        width: 150px;
+        padding: $pd-3;
+        text-align: center;
+        h2 {
+            font-size: $fs-0;
+        }
+        .switch {
+            width: 50px;
+            height: 25px;
+            margin: 0 10px;
+            position: relative;
+            input {
+                display: none;
+                &:checked + .slider {
+                    &::before {
+                        transform: translateX(22px);
+                    }
+                }
+            }
+            .slider {
+                background-color: $color-gray-6;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 34px;
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    background-color: $color-white-0;
+                    border-radius: 50%;
+                    display: inline-block;
+                    line-height: 17px;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 2px;
+                    transition: all, 0.5s;
+                }
+            }
+        }
+    }
+    &.is__opened {
+        transform: translateX(60%);
+    }
+}

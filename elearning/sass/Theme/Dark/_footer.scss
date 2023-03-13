@@ -1,0 +1,40 @@
+.darkMode {
+    .footer {
+        .footer__top {
+            ul {
+                .nav-item {
+                    color: $color-dark-5;
+                }
+            }
+            .btn-group {
+                .btn:focus {
+                    background-color: $color-dark-0;
+                }
+                .dropdown-menu {
+                    background-color: $color-dark-0;
+
+                    border-color: $color-dark-2;
+                    .dropdown-item {
+                        color: $color-dark-5;
+                    }
+                }
+            }
+        }
+        .footer__bottom {
+            .logo-black {
+                display: none;
+            }
+            .logo-white {
+                display: inline;
+            }
+            span {
+                color: $color-white-0;
+            }
+            .nav-item {
+                a {
+                    color: $color-white-0;
+                }
+            }
+        }
+    }
+}

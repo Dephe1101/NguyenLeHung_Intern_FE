@@ -1,0 +1,59 @@
+.course {
+    margin: $mg-1 0;
+    .course__content {
+        width: 90%;
+        margin: 0 auto;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .course__left {
+            background-color: $color-gray-1;
+            padding: 0 2rem;
+            h2 {
+                @include styleText($color-black-0, $fs-3 + 1, $fw-0);
+            }
+        }
+        #myTab {
+            margin-bottom: $mg-1;
+            .nav-link {
+                border: none;
+                @include styleText($color-black-0, $fs-0, $fw-0);
+                &.active {
+                    border: none;
+                    border-bottom: 5px solid $color-blue-0;
+                }
+                &:hover {
+                    @include styleText($color-blue-0, $fs-0, $fw-0);
+                }
+            }
+        }
+    }
+    @include responsive("screen-1") {
+        .course__content {
+            .card {
+                .card-title {
+                    @include styleText($color-black-0, $fs-1 - 1, $fw-1);
+                }
+                .card-text {
+                    @include styleText($color-gray-0, $fs-1 - 2, $fw-0);
+                }
+            }
+        }
+    }
+    @include responsive("screen-2") {
+        .course__content {
+            .card {
+                .card-title {
+                    @include styleText($color-black-0, $fs-1 - 3, $fw-1);
+                }
+                .card-text {
+                    @include styleText($color-gray-0, $fs-1 - 5, $fw-0);
+                }
+                .card-body {
+                    padding: 0.8rem;
+                }
+            }
+        }
+    }
+}

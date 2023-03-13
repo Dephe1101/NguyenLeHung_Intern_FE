@@ -1,0 +1,25 @@
+.job {
+    background-color: $color-gray-5;
+    .job__content {
+        .row {
+            padding: $pd-0 0;
+        }
+        .job__item {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: $pd-3 0;
+            h2 {
+                @include styleText($color-black-light, $fs-3 - 1, $fw-1);
+            }
+        }
+        .border__right {
+            border-right: 1px solid rgb(151, 151, 151);
+        }
+    }
+    @include responsive("medium") {
+        .border__right {
+            border-right: none !important;
+        }
+    }
+}
